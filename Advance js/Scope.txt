@@ -1,0 +1,3 @@
+functional Scope
+Global Scope
+Block scope - they are using {} in the 

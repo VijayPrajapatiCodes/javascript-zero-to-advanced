@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            /* display: flex;
+            align-items: center;
+            justify-content: center;
+           
+          
+      
+            padding: 22px 22px;
+           
+            background-color:black;
+        }
+    
+
+
+        .card{
+            max-width: 300px;
+            border-radius: 10px;
+            /* border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px; */
+            font-size: 22px;
+            font-family: "Gilroy";
+            font-weight: 300;
+            border-color:black;
+            background-color: #555;
+            display: inline-block;
+        }
+
+        .profile{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: red;
+            overflow: hidden;
+        }
+        h3{
+            margin-left: 10px;
+            color: white;
+        }
+        h5{
+         margin-left: 10px;
+         color: white;
+         font-size: 25px;
+        }
+        
+        p{
+         margin-left: 10px;
+         font-size: 20px;
+         margin-right: 10px;
+         margin-bottom: 10px;
+         color: white;
+        }
+
+        .profile img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        form{
+            display: flex;
+            justify-content: start;
+        align-items: start;
+           flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+   <main>
+ <form> 
+    <input type="text" placeholder="Photo">
+    <input type="text" placeholder="name">
+    <input type="text" placeholder="occupation">
+    <input type="text" placeholder="details">
+    <input type="Submit">
+ </form>
+
+   <div class="card">
+    <div class="profile">
+    <img src="https://images.unsplash.com/photo-1762170318123-616b97727044?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=368" alt="">
+    </div>
+    <h3>Vijay Prajapati</h3>
+    <h5>Coder</h5>
+    <p>I am coder of Java with the framework of Spring boot and i also learming of Fronted with React</p>
+   </div>
+   </main>
+   <script>
+
+    let form=document.querySelector("form")
+    let inputs=document.querySelectorAll("input")
+      let main = document.querySelector("main");
+    form.addEventListener("submit",function(dets){
+        dets.preventDefault()
+
+        let card=document.createElement("div")
+        card.classList.add("card")
+
+        let profile=document.createElement("div")
+        profile.classList.add("profile")
+
+        let img=document.createElement("img")
+        img.setAttribute("src",inputs[0].value)
+
+        let h3=document.createElement("h3")
+        h3.textContent=inputs[1].value
+
+        let h5=document.createElement("h4")
+        h5.textContent=inputs[2].value
+
+        let p=document.createElement("p")
+        p.textContent=inputs[3].value
+
+        profile.appendChild(img)
+        card.appendChild(profile)
+        card.appendChild(h3)
+        card.appendChild(h5)
+        card.appendChild(p)
+         main.appendChild(card); 
+
+        inputs.forEach(function(inp){
+        if(inp.type!=="submit"){
+            inp.value=""
+        }
+        }
+    )})
+   </script>
+</body>
+</html>

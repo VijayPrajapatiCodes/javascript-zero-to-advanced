@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Progress Bar</title>
+
+<style>
+    body{
+        height:100vh;
+        margin:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-family:Arial, sans-serif;
+        background:#0f1724;
+    }
+
+    .container{
+        width:300px;
+        padding:20px;
+        background:#1a2333;
+        border-radius:10px;
+        color:white;
+    }
+
+    .progress-box{
+        width:100%;
+        background:#233044;
+        height:16px;
+        border-radius:20px;
+        overflow:hidden;
+        margin-top:10px;
+    }
+
+    .progress-fill{
+        height:100%;
+        width:0%;
+        background:#14b8a6;
+        border-radius:20px;
+        transition: width 0.3s linear;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h3>Downloading...</h3>
+
+    <div class="progress-box">
+        <div class="progress-fill"></div>
+    </div>
+
+    <p style="opacity:0.7; margin-top:10px;">JS-based Progress Bar</p>
+</div>
+
+<script>
+    let count = 0;
+    let progress = document.querySelector(".progress-fill");
+
+    let timer = setInterval(() => {
+        if(count >= 100){
+            clearInterval(timer);
+        } else {
+            count++;
+            progress.style.width = count + "%";
+        }
+    }, 100); // speed
+</script>
+
+</body>
+</html>

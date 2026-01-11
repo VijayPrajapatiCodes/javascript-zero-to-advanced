@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function profilelakarlao(username,cb){
+            setTimeout(()=>{
+                console.log("Fetching of Data.....");
+                cb({id:11221,username,age:22,adress:"Agra"});
+                
+            },2000);
+        }
+          
+        function saarepostlekaraao(id,cb){
+              console.log("Fetching of Data.....");
+            setTimeout(() =>{
+              cb({id:id,posts:"Hey Hello"})
+            },2000);
+
+        }
+       function savepostlekaraao(id,cb){
+         console.log("Fetching of Data.....");
+         setTimeout(()=>{
+         cb({id:id,savepost:"Ram Ram ji"})
+         },2000);
+
+       } 
+
+        profilelakarlao("Vijay", function(data){
+            console.log(data);
+            saarepostlekaraao(data.id,function(posts){
+     console.log(posts);
+
+          savepostlekaraao(data.id,function(save){
+            console.log(save);
+            
+          })
+     
+            })
+            
+        })
+    </script>
+</body>
+</html>

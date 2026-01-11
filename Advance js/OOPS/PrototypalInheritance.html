@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ek object hai aaap uski properties ko inheritance kar rhe hai dusre object ke liye to usse Prototypal Inheritance kahte hai
+        let Coffee={
+            color: "dark",
+            drink: function(){
+                console.log("gut gut gut");
+                
+            }
+
+        }
+
+        let arbiatacoffee=Object.create(Coffee);
+        arbiatacoffee.taste="Bittter";
+        arbiatacoffee.drink();
+    </script>
+</body>
+</html>

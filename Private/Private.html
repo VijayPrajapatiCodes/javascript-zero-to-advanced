@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function  clickLimiter (){
+    let click=0;
+    return function (){
+         if(click<5){
+            click++;
+            console.log(`click : ${click} times`); 
+         }else{
+      
+                  console.error("LIMIT EXCEEDED, TRY AFTER SOME TIME")
+         }
+    }
+}
+
+const a =clickLimiter
+a();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function createBiscuits(name,prize,qty,color,seller){
+            this.name=name;
+            this.prize=prize;
+            this.qty=qty;
+            this.color=color;
+            this.seller=seller;
+            this.write= function(text){
+                let h1=document.createElement("h1");
+                h1.textContent=text;
+                h1.style.color=color;
+                document.body.append(h1);
+            };
+        }
+         createBiscuits.prototype.company="Prajapati"
+        let biscuits=new createBiscuits("Parle",5,3,"Prjapati","Abhi");
+        let biscuits2=new createBiscuits("Chocolate",10,20,"blue","Vijay","Prajapati")
+     
+        
+    </script>
+</body>
+</html>

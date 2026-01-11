@@ -1,0 +1,43 @@
+//Closure - closure hote hai function jo ki parent function ke under ho  aur under wale function 
+// return ho rha ho and returnring function use kare parent ka koi variable 
+
+
+
+// function abcd(){
+//     let v=10;
+//     return function defg(){
+//         console.log(v);
+        
+//     }
+// }
+
+// fayde or nuksan 
+// Variable ko private kar sakte hai 
+// Global pollution rok sakte hai 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CountForMe(){
+    let c=0
+    return function (){
+        c++
+        console.log(c);
+        
+    }
+}
+
+let count =CountForMe()
+count()
+count()
+count()
+    </script>
+</body>
+</html>

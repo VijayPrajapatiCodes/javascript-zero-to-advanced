@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("name","Vijay Prajapati")
+      let nm=  localStorage.getItem("name")
+      localStorage.setItem("name","Vijay")
+       let nms=  localStorage.getItem("name")
+
+       localStorage.setItem("friends",[ "Rakesh","Vijay","Jayendra"])
+       localStorage.setItem("friends",{one: "Vijay",two:"Ramesh"})
+
+       let a=JSON.stringify([1,2,3])
+
+       localStorage.setItem("Friends",JSON.stringify(["Akash","Sumit","Manoj","Rahul"]))
+
+      let b= JSON.parse('["Akash","Sumit","Manoj","Rahul"]')
+    </script>
+</body>
+</html>

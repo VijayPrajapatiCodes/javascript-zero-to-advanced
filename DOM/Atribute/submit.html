@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+ 
+            font-weight: 600;
+           
+            font-size: 5em;
+            font-weight: 600;
+            padding: 100px 220px;
+           
+
+        }
+        #files{
+            display: none;
+        }
+    form{
+            width: 500px; /* 🔹 Increase overall width */
+            padding: 40px 50px; /* 🔹 Increase inner spacing */
+            background-color: seagreen;
+            border-radius: 15px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2em; /* 🔹 Increase text size */
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* 🔹 Space between inputs */
+            box-shadow: 0 0 20px rgba(0,0,0,0.3); /* Optional: adds depth */
+        }
+        
+        input{
+            display: block;
+            
+        }
+    
+    </style>
+</head>
+<body>
+   <main>
+  <form>
+
+    <input type="text" placeholder="Name">
+     <input type="text" placeholder="Father Name">
+      <input type="text" placeholder="Mother Name">
+       <input type="text" placeholder="Mobile no">
+        <input type="Submit">
+  </form>
+   </main>
+   <script>
+
+let form=document.querySelector("form")
+let inputs=document.querySelectorAll("input")
+form.addEventListener("submit",function(dets){
+    dets.preventDefault()
+    console.log(inputs);
+    console.log(inputs[0].value);
+    console.log(inputs[1].value);
+    console.log(inputs[2].value);
+    console.log(inputs[3].value);
+    console.log(inputs[4].value);
+    
+})
+
+   </script>
+</body>
+</html>

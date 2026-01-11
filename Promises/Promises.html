@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function getData(success){
+       return new Promise((res, rej)=>{
+         console.log("Data Fetching.....");
+         
+         setTimeout(()=>{
+            if(success){
+                res("Data recivied successfully");
+            }else
+            {
+                rej("Failed to Fetch Data")
+            }
+         },3000);
+       })
+    }
+
+    getData(false).then(result=>{
+        console.log("Fulfilled",result);
+        
+    })
+    .catch(error=>{
+      console.log("Rejected",error);
+      
+    })
+    </script>
+</body>
+</html>

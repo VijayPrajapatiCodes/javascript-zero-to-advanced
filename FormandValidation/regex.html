@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #smalls,#error{
+        display: none;
+    }
+</style>
+<body>
+    <main>
+        <form id="forms" >
+            <input id="email"  type="email" placeholder="email" >
+            <small id="smalls">Invalid email</small>
+            <input id="pass" type="password" placeholder="password">
+            <small id="error"> Weak Password</small>
+            <input type="submit">
+        </form>
+    </main>
+    <script>
+       let form=document.querySelector("#forms")
+       let emailInput=document.querySelector("#email")
+       let passInput=document.querySelector("#pass")
+       form.addEventListener("submit",function(dets){
+        dets.preventDefault();
+        const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let emailians=email.test(emailInput.value)
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+         let passwords=passwordRegex.test(passInput.value)
+
+         if(!emailians){
+            document.querySelector("#smalls").textContent="Email is incorrect"
+            document.querySelector("#smalls").style.display="initial"
+
+         }else{
+            
+            document.querySelector("#smalls").style.display="none"
+         }
+         if(!passwords){
+             document.querySelector("#error").textContent="Password is Weak"
+             document.querySelector("#error").style.display="initial"
+         }else{
+            document.querySelector("#error").style.display="none"
+         }
+       })
+    </script>
+</body>
+</html>

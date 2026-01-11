@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //  Pending State
+    let pr=new Promise((res,rej)=>{
+        
+
+    });
+ 
+    // FullFilled State
+    let pr1=new Promise((res,rej)=>{
+      res("Aaaah order Fullfilled  ho gya  hai abhi")
+    });
+
+    pr1.then(result=>{
+        console.log(result);
+        
+    })
+
+
+    // Rejected State
+    let pr2=new Promise((res,rej)=>{
+        rej(" Aaah error aa gya ");
+    })
+    pr2.then(results=>{
+        console.log(results);
+        
+    })
+   </script> 
+</body>
+</html>

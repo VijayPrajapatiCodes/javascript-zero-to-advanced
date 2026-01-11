@@ -1,0 +1,3 @@
+Execution Context  - hypothtical synerio  - abstract
+js sabse pahale jaise hi apka function dekhta hai  sabse pahle  js banata hai  execution 
+context  ,ye ek process  hai jo ki do different phases mein chalata hai,memory phase and dusre ka naam hai execution phase 

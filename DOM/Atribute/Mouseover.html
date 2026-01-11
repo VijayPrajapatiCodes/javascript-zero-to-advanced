@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body,html {
+              overflow: hidden;
+        }
+        .rec{
+            width: 300px;
+            height: 220px;
+            background-color: red;
+            cursor: pointer;
+            border-radius: 10px;
+            position: absolute;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+        }
+    </style>
+</head>
+<body>
+   <div class="rec">
+
+   </div> 
+
+   <script>
+    let rec=document.querySelector(".rec")
+    rec.addEventListener("mouseover",function(){
+        rec.style.backgroundColor="yellow"
+    })
+
+      rec.addEventListener("mouseout",function(){
+        rec.style.backgroundColor="red"
+
+      
+    })
+      window.addEventListener("mousemove",function(dets){
+            rec.style.left=dets.clientX+"px"
+            rec.style.top=dets.clientY+"px"
+            
+        })
+   </script>
+</body>
+</html>
